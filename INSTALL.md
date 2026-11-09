@@ -8,7 +8,7 @@ Linux user; replace them with yours.
 
 | Requirement | Check | Install (Debian/Ubuntu) |
 |---|---|---|
-| Python ≥ 3.9 | `python3 -V` | `apt install python3` |
+| Python ≥ 3.10 | `python3 -V` | `apt install python3` |
 | Timezone data | `python3 -c "import zoneinfo; zoneinfo.ZoneInfo('Europe/Berlin')"` | `apt install tzdata` |
 | curl (for `cod2botctl status`) | `curl --version` | `apt install curl` |
 | tclsh (optional, Tcl test) | `echo 'puts [info patchlevel]' \| tclsh` | `apt install tcl` |

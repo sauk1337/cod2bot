@@ -14,7 +14,7 @@ straight into your IRC channel, with clean mIRC colours and without ever blockin
 ```
 
 - **Eggdrop side:** one Tcl script, asynchronous, no extra Tcl packages.
-- **Backend:** Python 3.9+ using **only the standard library** (no `pip install`), SQLite storage.
+- **Backend:** Python 3.10+ using **only the standard library** (no `pip install`), SQLite storage.
 - **Real data sources only**, checked against their `robots.txt` and terms (see [docs/SOURCES.md](docs/SOURCES.md)).
 
 ---
@@ -258,7 +258,7 @@ stays on IRC, answers "backend unavailable" and recovers by itself. Details: [do
 ## Requirements
 
 - **Eggdrop 1.8 or newer** (tested design target: 1.9 / 1.10) with Tcl 8.5+ (8.6 recommended)
-- **Python 3.9+** and the system timezone database (`tzdata`)
+- **Python 3.10+** and the system timezone database (`tzdata`)
 - Outgoing HTTPS (news, FPSChallenge, GitHub) and UDP (CoD2 servers, master `cod2master.activision.com:20710`)
 - Linux with systemd user services or cron (any POSIX shell for `cod2botctl`)
 - Optional: `curl` (for `cod2botctl status`), `tclsh` (runs the Tcl integration test)

@@ -1,0 +1,3 @@
+# Always LF: the bot runs on Linux (bash, Tcl, Python, systemd units)
+* text=auto eol=lf
+*.json binary=false

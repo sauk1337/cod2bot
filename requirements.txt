@@ -1,4 +1,4 @@
-# COD2BOT backend uses only the Python standard library (Python >= 3.9).
+# COD2BOT backend uses only the Python standard library (Python >= 3.10).
 # Nothing to install with pip. On minimal Linux images make sure these exist:
 #   python3, python3-venv (optional), tzdata (system package, for timezones)
 # Tests: python3 -m unittest discover -s backend/tests  (tclsh enables the Tcl test)

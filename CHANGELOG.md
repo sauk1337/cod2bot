@@ -18,4 +18,4 @@ First public release.
 - CoD2 knowledge base: maps (2026 competitive pool), weapons, modes, configs, commands, mods, guides.
 - Announcer with priorities, de-duplication and per-channel limits; daily digest.
 - Installers: `install.sh` (existing Eggdrop) and `deploy/install-eggdrop.sh` (Eggdrop 1.10.2 from source).
-- 54 tests including a simulated-Eggdrop integration test.
+- 54 tests (CI on Python 3.10 and 3.13) including a simulated-Eggdrop integration test.

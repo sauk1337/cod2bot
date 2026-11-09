@@ -36,7 +36,7 @@ ok "Eggdrop: $EGG"
 # --- 2. Python ----------------------------------------------------------------
 PY="$(command -v python3 || true)"
 [ -n "$PY" ] || die "python3 not found (apt install python3)"
-"$PY" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 9) else 1)' || die "Python >= 3.9 needed ($("$PY" -V))"
+"$PY" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 10) else 1)' || die "Python >= 3.10 needed ($("$PY" -V))"
 ok "$("$PY" -V)"
 "$PY" -c 'import zoneinfo; zoneinfo.ZoneInfo("Europe/Berlin")' 2>/dev/null && ok "tzdata" \
     || say "WARNING: timezone data missing (apt install tzdata) - times will be shown in UTC"
