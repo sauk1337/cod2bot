@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+	<atom:link href="https://www.moddb.com/games/call-of-duty-2/articles/feed/rss.xml" rel="self" type="application/rss+xml" />
+	 
+	<link>https://www.moddb.com/games/call-of-duty-2/articles</link>
+	<title>Articles RSS feed &#45; Call of Duty 2 - ModDB</title>
+	<description>Subscribe to the ModDB Call of Duty 2 article feed, and get the latest updates as they are posted.</description>
+	<language>en-us</language>
+	<pubDate>Fri, 06 Nov 2026 19:36:58 +0000</pubDate>
+	<copyright>Copyright 2026, DBolical Pty Ltd</copyright>
+	<category>Articles</category>
+	<ttl>180</ttl>
+	<image>
+		<title>Articles RSS feed &#45; Call of Duty 2 - ModDB</title>
+		<url>https://static.moddb.com/cutoff/images/logos/rss.png</url>
+		<link>https://www.moddb.com/games/call-of-duty-2/articles</link>
+		<width>120</width>
+		<height>90</height>
+	</image>
+	 
+	<item>
+		<title>CoD2 Tools for 3ds Max &#45; a modern pipeline for Call of Duty 2 modding</title>
+		<link>https://www.moddb.com/games/call-of-duty-2/features/cod2-tools-for-3ds-max-a-modern-pipeline-for-call-of-duty-2-modding</link>
+		<pubDate>Mon, 12 Oct 2026 12:24:04 +0000</pubDate>
+		<guid isPermaLink="false">articles352298</guid>
+				<description><![CDATA[<img src="https://media.moddb.com/cache/images/articles/1/353/352298/thumb_620x2000/32133234.jpg" alt="CoD2 Tools for 3ds Max &#45; a modern pipeline for Call of Duty 2 modding" /><br />CoD2 Tools is a work&#45;in&#45;progress plugin that brings the whole Call of Duty 2 modding workflow into 3ds Max 2025+. It imports and exports models, weapons and animations straight from the game files and retargets FBX/mocap animation. It also works as a mini Radiant for editing, compiling and testing maps, and includes an experimental converter for Call of Duty 1 / United Offensive maps.]]></description>
+		<enclosure url="https://media.moddb.com/cache/images/articles/1/353/352298/thumb_620x2000/32133234.jpg" length="0" type="image/jpeg" />
+		<media:content url="https://media.moddb.com/images/articles/1/353/352298/32133234.jpg" type="image/jpeg" medium="image">
+			<media:title type="plain">CoD2 Tools for 3ds Max &#45; a modern pipeline for Call of Duty 2 modding</media:title>
+			<media:description type="plain">CoD2 Tools is a work&#45;in&#45;progress plugin that brings the whole Call of Duty 2 modding workflow into 3ds Max 2025+. It imports and exports models, weapons and animations straight from the game files and retargets FBX/mocap animation. It also works as a mini Radiant for editing, compiling and testing maps, and includes an experimental converter for Call of Duty 1 / United Offensive maps.</media:description>
+			<media:thumbnail url="https://media.moddb.com/cache/images/articles/1/353/352298/thumb_620x2000/32133234.jpg" />
+		</media:content>
+			</item><item>
+		<title>RTX Remix Mod Competition Winners</title>
+		<link>https://www.moddb.com/groups/rtx-remix-modding/features/rtx-remix-mod-competition-winners</link>
+		<pubDate>Mon, 25 Aug 2025 03:49:25 +0000</pubDate>
+		<guid isPermaLink="false">articles338546</guid>
+				<description><![CDATA[<img src="https://media.moddb.com/cache/images/articles/1/339/338546/thumb_620x2000/rtx-remix-mod-contest-winners.png" alt="RTX Remix Mod Competition Winners" /><br />Congratulations to the 4 winners of the inaugural NVIDIA RTX Remix modding competition, Painkiller Remixed, Call of Duty 2 Remixed, Vampire The Masquerade: Bloodlines Remixed and I&#45;Ninja Remixed.]]></description>
+		<enclosure url="https://media.moddb.com/cache/images/articles/1/339/338546/thumb_620x2000/rtx-remix-mod-contest-winners.png" length="0" type="image/png" />
+		<media:content url="https://media.moddb.com/images/articles/1/339/338546/rtx-remix-mod-contest-winners.png" type="image/png" medium="image">
+			<media:title type="plain">RTX Remix Mod Competition Winners</media:title>
+			<media:description type="plain">Congratulations to the 4 winners of the inaugural NVIDIA RTX Remix modding competition, Painkiller Remixed, Call of Duty 2 Remixed, Vampire The Masquerade: Bloodlines Remixed and I&#45;Ninja Remixed.</media:description>
+			<media:thumbnail url="https://media.moddb.com/cache/images/articles/1/339/338546/thumb_620x2000/rtx-remix-mod-contest-winners.png" />
+		</media:content>
+			</item><item>
+		<title>V1.6.1 Release</title>
+		<link>https://www.moddb.com/mods/call-of-duty-2-german-campaign/news/v161-release</link>
+		<pubDate>Sun, 05 Jan 2025 01:28:17 +0000</pubDate>
+		<guid isPermaLink="false">articles332022</guid>
+				<description><![CDATA[<img src="https://media.moddb.com/cache/images/articles/1/333/332022/thumb_620x2000/release.3.png" alt="V1.6.1 Release" /><br />It&#39;s been a while, I use some of my free time to improve the mod.And now I want to release it to everyone.]]></description>
+		<enclosure url="https://media.moddb.com/cache/images/articles/1/333/332022/thumb_620x2000/release.3.png" length="0" type="image/png" />
+		<media:content url="https://media.moddb.com/images/articles/1/333/332022/release.3.png" type="image/png" medium="image">
+			<media:title type="plain">V1.6.1 Release</media:title>
+			<media:description type="plain">It&#39;s been a while, I use some of my free time to improve the mod.And now I want to release it to everyone.</media:description>
+			<media:thumbnail url="https://media.moddb.com/cache/images/articles/1/333/332022/thumb_620x2000/release.3.png" />
+		</media:content>
+			</item></channel></rss>

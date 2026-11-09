@@ -1,0 +1,35 @@
+[
+ {
+  "html_url": "https://github.com/eyza-cod2/zpam3/releases/tag/4.11",
+  "id": 430434597,
+  "tag_name": "4.11",
+  "name": "zPAM4.11",
+  "draft": false,
+  "prerelease": false,
+  "created_at": "2026-11-01T07:49:32Z",
+  "published_at": "2026-11-01T07:51:01Z",
+  "body": "# zPAM4.11\r\n\r\n## Commits since 4.10\r\n- zPAM4.11 (c05f226)\r\n- Keep player stats when reconnecting during a match (#23) (71c7c8d)\r\n- Cancel CoD2x match when players do not join / ready-up in time (#22) (1a36b48)\r\n"
+ },
+ {
+  "html_url": "https://github.com/eyza-cod2/zpam3/releases/tag/4.10",
+  "id": 429790281,
+  "tag_name": "4.10",
+  "name": "zPAM4.10",
+  "draft": false,
+  "prerelease": false,
+  "created_at": "2026-10-31T07:34:48Z",
+  "published_at": "2026-10-31T07:38:04Z",
+  "body": "# zPAM4.10\r\n\r\n## Commits since 4.09\r\n- zPAM4.10 (b56668d)\r\n- Flag leavers in CoD2x match (#24) (1772c39)\r\n- Match stats: multi-kills, trades and kills by weapon class (#25) (72ee49c)\r\n- Fix new weapons stats counting + right name in round report (ff48534)\r\n- Fix Kar98k Scope damage stats counting (3ec0e32)\r\n- Readme update (1eb0a6d)\r\n- CI: Tag release commit (c5f93da)\r\n"
+ },
+ {
+  "html_url": "https://github.com/eyza-cod2/zpam3/releases/tag/4.09",
+  "id": 409719049,
+  "tag_name": "4.09",
+  "name": "zPAM4.09",
+  "draft": false,
+  "prerelease": false,
+  "created_at": "2026-10-11T14:29:31Z",
+  "published_at": "2026-10-11T14:30:48Z",
+  "body": "# zPAM4.09\r\n\r\n- EU competitive rules: scr_smoke_type changed to 2 (consistent smoke)\r\n- New SA ruleset for the South American region - comp_sa (by brolpzt)\r\n- Kick players in team that are not allowed to play in the match - players are warned 2 times and then kicked (by h1z)\r\n- Extended match stats: real damage, headshots, entry kills/deaths, aces and clutches (by h1z)\r\n\r\n\r\n\r\n\r\n### Summary of rulesets\r\n\r\n| Setting | EU<br>`comp` | NA<br>`comp_na` | SA<br>`comp_sa` |\r\n|---|:---:|:---:|:---:|\r\n| **Smoke type** - see [smoke types](https://github.com/eyza-cod2/zpam3#smoke-types)<br>`scr_smoke_type` | 2 - Consistent | 2 - Consistent | 2 - Consistent |\r\n| **Antilag** - player's ping is considered when calculating hits<br>`g_antilag` | ❌ | ✅ | ✅ |\r\n| **Shotgun pellet spread** - predefined pattern instead of random spread, see [pellet spread and damage](https://github.com/eyza-cod2/zpam3#pellet-spread-and-pellet-damage)<br>`g_shotgun_spread_fix` | ✅ | ✅ | ✅ |\r\n| **Shotgun pellet damage** - damage depends only on distance, see [pellet spread and damage](https://github.com/eyza-cod2/zpam3#pellet-spread-and-pellet-damage)<br>`scr_shotgun_consistent` | ✅ | ✅ | ❌ |\r\n| **Buffed BAR** - faster reload and fire rate<br>`scr_bar_buffed` | ❌ | ✅ | ❌ |\r\n| **Buffed Bren** - faster reload<br>`scr_bren_buffed` | ❌ | ✅ | ❌ |\r\n| **British on Breakout TLS** - British instead of Americans<br>`scr_breakout_british` | ❌ | ✅ | ❌ |\r\n\r\nSame in all regions: neck shots count as headshots (`scr_hitbox_neck_kill 1`), server fps 30 (`sv_fps 30`).\r\n"
+ }
+]

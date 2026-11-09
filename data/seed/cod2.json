@@ -1,0 +1,674 @@
+{
+  "_comment": "COD2BOT knowledge base. Edit/extend freely: it is upserted into the database on every start (by key). Competitive map pool taken from FPSChallenge CoD2 tournaments (2026-11).",
+  "maps": [
+    {
+      "name": "mp_toujane",
+      "title": "Toujane",
+      "location": "Toujane, Tunisia",
+      "size": "medium",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 1,
+      "description": "The most played competitive CoD2 map. Desert village with a long middle street, rooftops and two bomb sites; strong for every role."
+    },
+    {
+      "name": "mp_burgundy",
+      "title": "Burgundy",
+      "location": "Burgundy, France",
+      "size": "medium",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 1,
+      "description": "French farmland town with barns and houses. Fast rotations; the barn and the middle houses decide most rounds."
+    },
+    {
+      "name": "mp_dawnville",
+      "title": "Dawnville",
+      "location": "France",
+      "size": "medium",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 1,
+      "description": "Village around a church and a long main road. Plenty of long sightlines for rifles and snipers."
+    },
+    {
+      "name": "mp_matmata",
+      "title": "Matmata",
+      "location": "Matmata, Tunisia",
+      "size": "medium",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 1,
+      "description": "North African town with narrow alleys and courtyards. Close range fights; SMGs and nades shine."
+    },
+    {
+      "name": "mp_carentan",
+      "title": "Carentan",
+      "location": "Carentan, France",
+      "size": "medium",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 1,
+      "description": "Classic Call of Duty remake: ruined town streets and buildings. Balanced map with many windows to control."
+    },
+    {
+      "name": "mp_trainstation",
+      "title": "Trainstation",
+      "location": "France",
+      "size": "large",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 1,
+      "description": "Bombed city blocks around a train station. Large map with long streets and building-to-building fights."
+    },
+    {
+      "name": "mp_breakout_tls",
+      "title": "Breakout TLS",
+      "location": "Villers-Bocage, France",
+      "size": "medium",
+      "modes": "sd",
+      "competitive": 1,
+      "description": "Competitive edit of mp_breakout used in current tournament map pools."
+    },
+    {
+      "name": "mp_railyard_mjr",
+      "title": "Railyard MJR",
+      "location": "Stalingrad, Russia",
+      "size": "medium",
+      "modes": "sd",
+      "competitive": 1,
+      "description": "Competitive edit of mp_railyard (snowy Stalingrad rail yard) used in current tournament map pools."
+    },
+    {
+      "name": "mp_leningrad_tls",
+      "title": "Leningrad TLS",
+      "location": "Leningrad, Russia",
+      "size": "small",
+      "modes": "sd",
+      "competitive": 1,
+      "description": "Competitive edit of mp_leningrad used in current tournament map pools."
+    },
+    {
+      "name": "mp_vallente",
+      "title": "Vallente",
+      "location": "custom map",
+      "size": "medium",
+      "modes": "sd",
+      "competitive": 1,
+      "description": "Custom map played in current competitive CoD2 pools (e.g. Powerhouse CoD2 Challenge)."
+    },
+    {
+      "name": "mp_breakout",
+      "title": "Villers-Bocage",
+      "location": "Villers-Bocage, France",
+      "size": "medium",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 0,
+      "description": "Stock map. Town square with a central hall; base of the Breakout TLS competitive edit."
+    },
+    {
+      "name": "mp_brecourt",
+      "title": "Brecourt",
+      "location": "Brecourt, France",
+      "size": "large",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 0,
+      "description": "Classic CoD remake: hedgerows, open fields and artillery positions. Sniper heaven."
+    },
+    {
+      "name": "mp_decoy",
+      "title": "El Alamein",
+      "location": "El Alamein, Egypt",
+      "size": "large",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 0,
+      "description": "Open desert with trenches and bunkers. Long range rifles and snipers dominate."
+    },
+    {
+      "name": "mp_downtown",
+      "title": "Moscow",
+      "location": "Moscow, Russia",
+      "size": "large",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 0,
+      "description": "Snowy city streets and big buildings. Lots of vertical fights."
+    },
+    {
+      "name": "mp_farmhouse",
+      "title": "Beltot",
+      "location": "Beltot, France",
+      "size": "medium",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 0,
+      "description": "Countryside farm with a big field and houses on both sides."
+    },
+    {
+      "name": "mp_leningrad",
+      "title": "Leningrad",
+      "location": "Leningrad, Russia",
+      "size": "small",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 0,
+      "description": "Small snowy map with a central square. Fast and chaotic in public servers."
+    },
+    {
+      "name": "mp_railyard",
+      "title": "Stalingrad",
+      "location": "Stalingrad, Russia",
+      "size": "medium",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 0,
+      "description": "Snowy rail yard with wagons and warehouses; base of Railyard MJR."
+    },
+    {
+      "name": "mp_harbor",
+      "title": "Rostov",
+      "location": "Rostov, Russia",
+      "size": "large",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 0,
+      "description": "Harbour map added after release (bonus map)."
+    },
+    {
+      "name": "mp_rhine",
+      "title": "Wallendar",
+      "location": "Rhine, Germany",
+      "size": "large",
+      "modes": "sd tdm dm ctf hq",
+      "competitive": 0,
+      "description": "German town on the Rhine added after release (bonus map)."
+    }
+  ],
+  "weapons": [
+    {
+      "key": "m1garand",
+      "name": "M1 Garand",
+      "class": "rifle",
+      "faction": "American",
+      "description": "Semi-automatic 8-round rifle. Reliable mid/long range damage."
+    },
+    {
+      "key": "m1carbine",
+      "name": "M1A1 Carbine",
+      "class": "rifle",
+      "faction": "American",
+      "description": "Light semi-automatic carbine with a bigger magazine and less damage than the Garand."
+    },
+    {
+      "key": "thompson",
+      "name": "Thompson",
+      "class": "smg",
+      "faction": "American/British",
+      "description": "Classic SMG, high rate of fire, great at short range."
+    },
+    {
+      "key": "greasegun",
+      "name": "M3 Grease Gun",
+      "class": "smg",
+      "faction": "American",
+      "description": "Slow-firing, very controllable SMG."
+    },
+    {
+      "key": "bar",
+      "name": "BAR",
+      "class": "automatic rifle",
+      "faction": "American",
+      "description": "Browning Automatic Rifle: high damage full auto with heavy recoil."
+    },
+    {
+      "key": "springfield",
+      "name": "Springfield (scoped)",
+      "class": "sniper",
+      "faction": "American",
+      "description": "Bolt-action scoped rifle of the American side."
+    },
+    {
+      "key": "enfield",
+      "name": "Lee-Enfield",
+      "class": "rifle",
+      "faction": "British",
+      "description": "Bolt-action rifle with a 10-round magazine."
+    },
+    {
+      "key": "sten",
+      "name": "Sten",
+      "class": "smg",
+      "faction": "British",
+      "description": "British SMG, light and fast."
+    },
+    {
+      "key": "bren",
+      "name": "Bren",
+      "class": "light machine gun",
+      "faction": "British",
+      "description": "Accurate light machine gun, strong at medium range."
+    },
+    {
+      "key": "enfieldscope",
+      "name": "Lee-Enfield (scoped)",
+      "class": "sniper",
+      "faction": "British",
+      "description": "Scoped version of the Enfield."
+    },
+    {
+      "key": "mosin",
+      "name": "Mosin-Nagant",
+      "class": "rifle",
+      "faction": "Russian",
+      "description": "Bolt-action Russian rifle."
+    },
+    {
+      "key": "svt40",
+      "name": "SVT-40",
+      "class": "rifle",
+      "faction": "Russian",
+      "description": "Semi-automatic Russian rifle."
+    },
+    {
+      "key": "ppsh",
+      "name": "PPSh-41",
+      "class": "smg",
+      "faction": "Russian",
+      "description": "Huge magazine and very high rate of fire."
+    },
+    {
+      "key": "pps42",
+      "name": "PPS-42",
+      "class": "smg",
+      "faction": "Russian",
+      "description": "Lighter Russian SMG with a slower rate of fire."
+    },
+    {
+      "key": "mosinscope",
+      "name": "Mosin-Nagant (scoped)",
+      "class": "sniper",
+      "faction": "Russian",
+      "description": "Scoped Mosin-Nagant."
+    },
+    {
+      "key": "kar98k",
+      "name": "Kar98k",
+      "class": "rifle",
+      "faction": "German",
+      "description": "Iconic German bolt-action rifle; the reference weapon for rifle players."
+    },
+    {
+      "key": "g43",
+      "name": "Gewehr 43",
+      "class": "rifle",
+      "faction": "German",
+      "description": "Semi-automatic German rifle."
+    },
+    {
+      "key": "mp40",
+      "name": "MP40",
+      "class": "smg",
+      "faction": "German",
+      "description": "Balanced German SMG, low recoil."
+    },
+    {
+      "key": "mp44",
+      "name": "MP44 / StG 44",
+      "class": "assault rifle",
+      "faction": "German",
+      "description": "First assault rifle; powerful full auto at medium range."
+    },
+    {
+      "key": "kar98kscope",
+      "name": "Kar98k (scoped)",
+      "class": "sniper",
+      "faction": "German",
+      "description": "Scoped Kar98k."
+    },
+    {
+      "key": "shotgun",
+      "name": "Trench Gun (shotgun)",
+      "class": "shotgun",
+      "faction": "All",
+      "description": "Pump shotgun available to every faction. Deadly up close; often limited by competitive rules."
+    },
+    {
+      "key": "colt",
+      "name": "Colt .45",
+      "class": "pistol",
+      "faction": "American",
+      "description": "American sidearm."
+    },
+    {
+      "key": "webley",
+      "name": "Webley",
+      "class": "pistol",
+      "faction": "British",
+      "description": "British revolver sidearm."
+    },
+    {
+      "key": "tt33",
+      "name": "TT-33",
+      "class": "pistol",
+      "faction": "Russian",
+      "description": "Russian Tokarev sidearm."
+    },
+    {
+      "key": "luger",
+      "name": "Luger P08",
+      "class": "pistol",
+      "faction": "German",
+      "description": "German sidearm."
+    },
+    {
+      "key": "frag",
+      "name": "Frag grenade",
+      "class": "grenade",
+      "faction": "All",
+      "description": "Cookable fragmentation grenade (hold the throw button to cook)."
+    },
+    {
+      "key": "smoke",
+      "name": "Smoke grenade",
+      "class": "grenade",
+      "faction": "All",
+      "description": "Blocks vision; key for bomb plants and crossing open streets."
+    }
+  ],
+  "kb": {
+    "gamemodes": [
+      {
+        "key": "sd",
+        "title": "Search & Destroy (sd)",
+        "body": "One life per round. Attackers plant the bomb on A or B, defenders prevent it or defuse. The competitive mode: 5v5 S&D is the standard of leagues and cups."
+      },
+      {
+        "key": "tdm",
+        "title": "Team Deathmatch (tdm)",
+        "body": "Two teams, respawns, first to the score limit wins. Good for warm-ups and public servers."
+      },
+      {
+        "key": "dm",
+        "title": "Deathmatch (dm)",
+        "body": "Free for all with respawns. Great aim practice."
+      },
+      {
+        "key": "ctf",
+        "title": "Capture the Flag (ctf)",
+        "body": "Steal the enemy flag and bring it to your base."
+      },
+      {
+        "key": "hq",
+        "title": "Headquarters (hq)",
+        "body": "Teams fight to capture and hold a radio; holders do not respawn while it is theirs."
+      }
+    ],
+    "classes": [
+      {
+        "key": "rifle",
+        "title": "Rifle",
+        "body": "Kar98k / Enfield / Mosin / Garand. Long range, rewards precise aim: the core role of competitive S&D."
+      },
+      {
+        "key": "smg",
+        "title": "SMG",
+        "body": "Thompson, MP40, PPSh, Sten, Grease Gun, PPS-42. Entry fragging and close quarters."
+      },
+      {
+        "key": "auto",
+        "title": "Assault / automatic",
+        "body": "MP44, BAR, Bren. Medium range full auto; often limited in competitive rules."
+      },
+      {
+        "key": "sniper",
+        "title": "Sniper",
+        "body": "Scoped rifles. Hold long angles; usually limited to one per team in competitive play."
+      },
+      {
+        "key": "shotgun",
+        "title": "Shotgun",
+        "body": "Trench Gun for every faction. Close range only; frequently restricted by leagues."
+      }
+    ],
+    "configs": [
+      {
+        "key": "network",
+        "title": "Network config",
+        "body": "seta rate \"25000\" ; seta snaps \"30\" ; seta cl_maxpackets \"100\" - the usual online values for a good connection."
+      },
+      {
+        "key": "fps",
+        "title": "FPS",
+        "body": "seta com_maxfps \"125\" - CoD2 uses Quake 3 style physics: 125, 250 and 333 FPS change jump heights. Check your league/server rules before using values other than 125."
+      },
+      {
+        "key": "mouse",
+        "title": "Mouse",
+        "body": "seta cl_mouseAccel \"0\" ; seta m_pitch \"0.022\" ; seta m_yaw \"0.022\". Disable Windows 'Enhance pointer precision' and pick a sensitivity you can repeat 180s with."
+      },
+      {
+        "key": "hud",
+        "title": "HUD / info",
+        "body": "seta cg_drawFPS \"Simple\" shows your FPS counter on screen."
+      },
+      {
+        "key": "performance",
+        "title": "Performance",
+        "body": "Disable V-Sync, lower shadows and dynamic lights, keep texture quality as you like. Run the game in DX9 mode on modern PCs; CoD2x improves compatibility with current Windows."
+      },
+      {
+        "key": "competitive",
+        "title": "Competitive config",
+        "body": "Most leagues play on zPAM servers that enforce cvars: keep a clean config (no exploits), record demos (/record) and have screenshots enabled. Read the rules of each competition."
+      }
+    ],
+    "commands": [
+      {
+        "key": "connect",
+        "title": "/connect ip:port",
+        "body": "Join a server. /reconnect rejoins the last one, /disconnect leaves."
+      },
+      {
+        "key": "record",
+        "title": "/record <name>",
+        "body": "Start recording a demo; /stoprecord ends it; /demo <name> plays it back. Many leagues require demos."
+      },
+      {
+        "key": "screenshot",
+        "title": "/screenshotJPEG",
+        "body": "Takes a JPEG screenshot (saved in main/screenshots). Bind it: bind F12 \"screenshotJPEG\"."
+      },
+      {
+        "key": "bind",
+        "title": "/bind <key> \"<command>\"",
+        "body": "Bind any command to a key. Example: bind v \"say_team Planting at A!\". /unbind <key> removes it."
+      },
+      {
+        "key": "vstr",
+        "title": "/set + /vstr",
+        "body": "Create toggles: set x1 \"cg_drawFPS Simple; set xt vstr x2\" ; set x2 \"cg_drawFPS Off; set xt vstr x1\" ; set xt \"vstr x1\" ; bind f \"vstr xt\"."
+      },
+      {
+        "key": "name",
+        "title": "/name <name>",
+        "body": "Change your nickname. Colours: ^1 red ^2 green ^3 yellow ^4 blue ^5 cyan ^6 pink ^7 white ^0 black."
+      },
+      {
+        "key": "rcon",
+        "title": "/rcon login <password>",
+        "body": "Server admin: /rcon status, /rcon map mp_toujane, /rcon g_gametype sd, /rcon map_restart, /rcon fast_restart, /rcon map_rotate, /rcon clientkick <id>."
+      },
+      {
+        "key": "exec",
+        "title": "/exec <file>.cfg",
+        "body": "Run a config file from main/ (or your mod folder). writeconfig <file> saves your current settings."
+      }
+    ],
+    "mods": [
+      {
+        "key": "zpam",
+        "title": "zPAM",
+        "body": "Competitive mod used by leagues and cups (match modes, ready-up, timeouts, anti-exploit, stats). Releases: github.com/eyza-cod2/zpam3 - latest checked: zPAM4.11 (2026-11-01)."
+      },
+      {
+        "key": "cod2x",
+        "title": "CoD2x",
+        "body": "Community patch for CoD2 1.3 with fixes and improvements for modern systems. Releases: github.com/callofduty2x/CoD2x - latest checked: 1.4.6.8 (2026-04)."
+      },
+      {
+        "key": "codjumper",
+        "title": "CoDJumper",
+        "body": "Jump/trick mod with dedicated jump maps (jm_*); many servers are online."
+      },
+      {
+        "key": "deathrun",
+        "title": "Deathrun (Dr mod)",
+        "body": "Deathrun gamemode: runners against a trap activator. Listed on ModDB."
+      },
+      {
+        "key": "gungame",
+        "title": "Gun Game",
+        "body": "Progression gametype: every kill gives the next weapon. Latest on ModDB: Gungame 4.0b."
+      },
+      {
+        "key": "back2uo",
+        "title": "back2uo",
+        "body": "Mod that brings United Offensive style gameplay to CoD2 (ModDB: back2uo v2.1.12, 2026-10)."
+      }
+    ],
+    "tools": [
+      {
+        "key": "dedicated",
+        "title": "Dedicated server",
+        "body": "Linux: cod2_lnxded with the 1.3 files; Windows: CoD2MP_s.exe +set dedicated 2. Typical port 28960/UDP. Example: ./cod2_lnxded +set dedicated 2 +set net_port 28960 +exec server.cfg +map_rotate"
+      },
+      {
+        "key": "linuxgsm",
+        "title": "LinuxGSM",
+        "body": "LinuxGSM has a CoD2 server script (cod2server) to install, update and monitor servers."
+      },
+      {
+        "key": "b3",
+        "title": "Big Brother Bot (B3)",
+        "body": "Server administration bot (rcon based): commands, warnings, bans and stats. Supports Call of Duty 2."
+      },
+      {
+        "key": "master",
+        "title": "Master server",
+        "body": "Servers report to cod2master.activision.com:20710. Protocol 118 = v1.3, 117 = v1.2, 115 = v1.0."
+      }
+    ],
+    "guides": [
+      {
+        "key": "sd-basics",
+        "title": "S&D basics",
+        "body": "Talk: call enemies with location and health. Trade kills: never peek alone. Use smokes to plant, keep a player alive for the clutch, and do not chase kills after the bomb is planted."
+      },
+      {
+        "key": "rifle",
+        "title": "Rifle aim",
+        "body": "Pre-aim common angles at head height, stop moving before you shoot, and practise flicks on DM servers. Bolt rifles reward patience: reposition after every shot."
+      },
+      {
+        "key": "nades",
+        "title": "Grenades",
+        "body": "Cook frags (hold) so enemies cannot run away. Learn 2-3 nade spots per map side; one good nade at round start saves a teammate."
+      },
+      {
+        "key": "demo",
+        "title": "Review your demos",
+        "body": "Record every official match (/record). Watch your deaths: positioning errors repeat more than aim errors."
+      },
+      {
+        "key": "war-setup",
+        "title": "Organising a war",
+        "body": "Agree format (5v5 S&D), maps, server, rules (zPAM version, weapon limits) and time with the other clan. Create it with !war create and the bot reminds the channel before it starts."
+      }
+    ],
+    "tips": [
+      {
+        "key": "t1",
+        "title": "Tip",
+        "body": "Cook your grenades: hold the throw button and release before it explodes in your hand."
+      },
+      {
+        "key": "t2",
+        "title": "Tip",
+        "body": "Crouch and prone change your accuracy and silhouette: crouch-peek long angles with a rifle."
+      },
+      {
+        "key": "t3",
+        "title": "Tip",
+        "body": "Smoke the doors and streets you must cross; in S&D a good smoke is worth a kill."
+      },
+      {
+        "key": "t4",
+        "title": "Tip",
+        "body": "Keep com_maxfps stable: frame drops affect both aim and jumps."
+      },
+      {
+        "key": "t5",
+        "title": "Tip",
+        "body": "In 1v1 clutches, play the bomb timer: make the enemy come to you."
+      },
+      {
+        "key": "t6",
+        "title": "Tip",
+        "body": "Record demos of official matches - many leagues ask for them when there are complaints."
+      },
+      {
+        "key": "t7",
+        "title": "Tip",
+        "body": "Use !find <name> to see on which public server your mates are playing right now."
+      },
+      {
+        "key": "t8",
+        "title": "Tip",
+        "body": "Check the server with !server <name> before a war: map, slots and ping in one line."
+      }
+    ]
+  },
+  "quotes": [
+    {
+      "kind": "quote",
+      "text": "Never in the field of human conflict was so much owed by so many to so few.",
+      "author": "Winston Churchill"
+    },
+    {
+      "kind": "quote",
+      "text": "Courage is fear holding on a minute longer.",
+      "author": "George S. Patton"
+    },
+    {
+      "kind": "quote",
+      "text": "In preparing for battle I have always found that plans are useless, but planning is indispensable.",
+      "author": "Dwight D. Eisenhower"
+    },
+    {
+      "kind": "quote",
+      "text": "We shall defend our island, whatever the cost may be, we shall fight on the beaches.",
+      "author": "Winston Churchill"
+    },
+    {
+      "kind": "fact",
+      "text": "Call of Duty 2 was released for PC on 25 October 2005, developed by Infinity Ward and published by Activision."
+    },
+    {
+      "kind": "fact",
+      "text": "Call of Duty 2 was the first game of the series with regenerating health instead of health packs."
+    },
+    {
+      "kind": "fact",
+      "text": "Call of Duty 2 was a launch title of the Xbox 360 in November 2005."
+    },
+    {
+      "kind": "fact",
+      "text": "The last official PC patch of Call of Duty 2 is 1.3; the community keeps the game alive with CoD2x and zPAM."
+    },
+    {
+      "kind": "fact",
+      "text": "CoD2 servers still announce themselves to cod2master.activision.com - hundreds of servers answer today."
+    },
+    {
+      "kind": "fact",
+      "text": "Call of Duty 2 runs on a heavily modified id Tech 3 (Quake III) engine, which is why FPS values like 125/250/333 change jump heights."
+    },
+    {
+      "kind": "fact",
+      "text": "Carentan and Brecourt are remakes of maps from the original Call of Duty (2003)."
+    },
+    {
+      "kind": "fact",
+      "text": "Map files keep the mp_ prefix: mp_toujane, mp_burgundy, mp_carentan... type !map <name> for details."
+    }
+  ]
+}

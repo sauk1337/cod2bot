@@ -1,0 +1,69 @@
+# =====================================================================
+#  Minimal Eggdrop 1.10 configuration for a COD2BOT bot.
+#  Copy it to your Eggdrop directory as eggdrop.conf and edit every
+#  value marked with CHANGE. Full reference: the eggdrop.conf shipped
+#  with Eggdrop (doc/settings/) - https://docs.eggheads.org
+# =====================================================================
+
+set mod-path "modules/"
+set help-path "help/"
+set text-path "text/"
+
+# --- Network ------------------------------------------------------------
+# CHANGE: your server's addresses (leave commented to use the defaults)
+#set vhost4 "203.0.113.10"
+#set vhost6 "2001:db8::10"
+#set listen-addr "203.0.113.10"
+#set prefer-ipv6 1
+
+# --- Modules ------------------------------------------------------------
+loadmodule pbkdf2
+# Uncomment only when migrating an old userfile with blowfish passwords:
+#loadmodule blowfish
+loadmodule channels
+loadmodule server
+loadmodule ctcp
+loadmodule irc
+loadmodule notes
+loadmodule console
+loadmodule uptime
+
+# --- Identity -------------------------------------------------------------
+set nick "COD2BOT"                ;# CHANGE
+set altnick "COD2BOT?"            ;# CHANGE
+set username "cod2bot"
+set realname "Call of Duty 2 community bot"
+set owner "yourhandle"            ;# CHANGE: your handle on the bot
+set ctcp-version "COD2BOT - Call of Duty 2 community bot"
+
+# --- IRC network ------------------------------------------------------------
+# CHANGE: EFnet IRCnet Undernet DALnet Libera QuakeNet Rizon Other
+set net-type "Other"
+server add irc.example.net 6667   ;# CHANGE (use +6697 for TLS if the network offers it)
+#server add irc2.example.net 6667
+
+# Channels (more with .+chan on the partyline). Enable COD2BOT on a channel
+# with: .chanset #yourchannel +cod2   (or enable_chans in scripts/cod2bot/cod2bot.conf)
+channel add #yourchannel          ;# CHANGE
+
+# --- Files / partyline --------------------------------------------------------
+set userfile "bot.user"
+set chanfile "bot.chan"
+set pidfile "pid.bot"
+listen 3333 all                   ;# partyline: telnet <server> 3333
+# Fixed port range for DCC CHAT (open it in your firewall together with the listen port)
+set reserved-portrange 3334:3340
+logfile mcobxs * "logs/eggdrop.log"
+set console "mkcobxs"
+
+# --- Time ------------------------------------------------------------------------
+set timezone "Europe/Berlin"      ;# CHANGE: any tz database name
+set env(TZ) "$timezone"
+
+# --- Scripts -----------------------------------------------------------------------
+source scripts/alltools.tcl
+source scripts/compat.tcl
+# Optional: channel protection / QuakeNet Q login -> https://github.com/sauk1337/service.tcl
+#source scripts/service/service.tcl
+# COD2BOT (needs the backend running: see INSTALL.md)
+source scripts/cod2bot/cod2bot.tcl

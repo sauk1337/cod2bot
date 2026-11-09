@@ -1,0 +1,33 @@
+# secrets and runtime data - never commit
+.env
+data/*
+!data/seed/
+!data/seed/**
+logs/*
+backups/*
+*.db
+*.db-wal
+*.db-shm
+*.pid
+api.token
+
+# Eggdrop files if the repo is cloned inside an Eggdrop directory
+*.user
+*.chan
+*.user~bak
+*.chan~bak
+eggdrop.conf
+service.conf
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

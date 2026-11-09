@@ -1,0 +1,24 @@
+# COD2BOT backend - systemd unit (installed by install.sh with the right paths)
+# User service:   ~/.config/systemd/user/cod2bot-backend.service
+#                 systemctl --user enable --now cod2bot-backend
+#                 loginctl enable-linger $USER   (keep it running without login)
+[Unit]
+Description=COD2BOT backend (Call of Duty 2 IRC bot - news, servers, tournaments)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=@ROOT@/backend
+Environment=PYTHONUNBUFFERED=1
+Environment=COD2BOT_ROOT=@ROOT@
+ExecStart=@PYTHON@ -m app
+Restart=always
+RestartSec=10
+# hardening (works for user and system services)
+NoNewPrivileges=yes
+PrivateTmp=yes
+UMask=0077
+
+[Install]
+WantedBy=default.target

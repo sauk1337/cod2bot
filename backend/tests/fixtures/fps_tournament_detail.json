@@ -1,0 +1,83 @@
+{
+ "id": 4536,
+ "name": "Call of Duty 4 - Nightcup #15",
+ "slug": "call-of-duty-4-nightcup-15",
+ "state": "REGISTRATION",
+ "mode": "FREE",
+ "version": 2,
+ "description": "<h2><strong>Call of Duty 4 - Nightcup #15</strong></h2>",
+ "start": "2026-11-08 19:00:00",
+ "registrationStart": "2026-10-24 13:00:00",
+ "registrationEnd": "2026-11-08 18:39:00",
+ "checkinStart": "2026-11-08 18:40:00",
+ "checkinEnd": "2026-11-08 18:55:00",
+ "checkinRequired": true,
+ "minTeams": 8,
+ "maxTeams": 24,
+ "teamsCount": 18,
+ "registrationUnit": "teams",
+ "registrationCount": 18,
+ "registrationMin": 8,
+ "registrationMax": 24,
+ "playerBaseCount": 5,
+ "playerSubCount": 3,
+ "league": true,
+ "isDraft": false,
+ "draftedAt": null,
+ "draftMode": null,
+ "draftStartedAt": null,
+ "statsAvailability": true,
+ "gameName": "Call of Duty 4",
+ "image": "https://fpschallenge.b-cdn.net/public/tournament/o6YbtNi2tl7oUlawhYDQdTP4XOvQ69Rpq2dqKFzo.jpg",
+ "isFinished": false,
+ "showGroups": false,
+ "showSchedule": false,
+ "groupsUrl": null,
+ "showPlayoffs": false,
+ "playoffStageId": null,
+ "bracketTeams": null,
+ "skipConsolationRound": false,
+ "mapPool": [
+  {
+   "name": "Backlot",
+   "image": "https://fpschallenge.b-cdn.net/public/map/Z0owXzDfQK0Jcj0fjlTcVpb1Bo1icRab31wqoFBh.jpg"
+  },
+  {
+   "name": "Crash",
+   "image": "https://fpschallenge.b-cdn.net/public/map/XjJF4ULcFuVonGlQXNVmsxilQDfhMLoTvLbHcH2Z.jpg"
+  },
+  {
+   "name": "District",
+   "image": "https://fpschallenge.b-cdn.net/public/map/6RWHTONrOydMDf8vdgABysN1Ms8jUcyZdylwMDWV.jpg"
+  },
+  {
+   "name": "Crossfire",
+   "image": "https://fpschallenge.b-cdn.net/public/map/gnVUieoAE7zetkS7CJZeRAv38JUD8OXjgGjNjJ1X.jpg"
+  },
+  {
+   "name": "Strike",
+   "image": "https://fpschallenge.b-cdn.net/public/map/lu8cKgnmTz9FHWAOeNc4d42hR17ewsqd22UDJcYA.jpg"
+  },
+  {
+   "name": "Coastal",
+   "image": "https://fpschallenge.b-cdn.net/public/map/ro8XHZP7ORPQaIrT2jMyjJZieders2mqHlQRXimQ.jpg"
+  },
+  {
+   "name": "Manorhouse",
+   "image": "https://fpschallenge.b-cdn.net/public/map/jMMFmaQplfrPk9EKPIBny7XAz3hY9Irhlh2o5Lif.jpg"
+  }
+ ],
+ "frsSystem": "2026",
+ "frsCategory": "SMALL",
+ "frsPrizes": {
+  "1": {
+   "vip_days": 7
+  }
+ },
+ "frsMinTeams": 8,
+ "extraPrizes": [],
+ "gameSlug": "cod4",
+ "isLoggedIn": false,
+ "currentUserId": null,
+ "myTeam": null
+}

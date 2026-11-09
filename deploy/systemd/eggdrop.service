@@ -1,0 +1,19 @@
+# OPTIONAL: run Eggdrop under systemd instead of cron/botchk.
+# Eggdrop forks to the background and writes its pid file (set pidfile in eggdrop.conf;
+# change PIDFile below to match it).
+# Do not use it together with the botchk crontab (choose one).
+[Unit]
+Description=Eggdrop (COD2BOT)
+After=network-online.target cod2bot-backend.service
+Wants=network-online.target
+
+[Service]
+Type=forking
+WorkingDirectory=@EGGDROP@
+ExecStart=@EGGDROP@/eggdrop @EGGDROP@/eggdrop.conf
+PIDFile=@EGGDROP@/pid.bot
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=default.target

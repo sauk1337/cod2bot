@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/eyza-cod2/zpam3/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/eyza-cod2/zpam3/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/eyza-cod2/zpam3/releases.atom"/>
+  <title>Release notes from zpam3</title>
+  <updated>2026-11-01T07:49:32Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/252138837/4.11</id>
+    <updated>2026-11-01T07:51:01Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/eyza-cod2/zpam3/releases/tag/4.11"/>
+    <title>zPAM4.11</title>
+    <content type="html">&lt;h1&gt;zPAM4.11&lt;/h1&gt;
+&lt;h2&gt;Commits since 4.10&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;zPAM4.11 (&lt;a class=&quot;commit-link&quot; data-hovercard-type=&quot;commit&quot; data-hovercard-url=&quot;https://github.com/eyza-cod2/zpam3/commit/c05f226fad71c1845eee069e9cce63377507b7dc/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/commit/c05f226fad71c1845eee069e9cce63377507b7dc&quot;&gt;&lt;tt&gt;c05f226&lt;/tt&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Keep player stats when reconnecting during a match (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;5835362510&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/eyza-cod2/zpam3/issues/23&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/eyza-cod2/zpam3/pull/23/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/pull/23&quot;&gt;#23&lt;/a&gt;) (&lt;a class=&quot;commit-link&quot; data-hovercard-type=&quot;commit&quot; data-hovercard-url=&quot;https://github.com/eyza-cod2/zpam3/commit/71c7c8d09822e18000f579894aa0eaee3a58f807/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/commit/71c7c8d09822e18000f579894aa0eaee3a58f807&quot;&gt;&lt;tt&gt;71c7c8d&lt;/tt&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Cancel CoD2x match when players do not join / ready-up in time (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;5759363817&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/eyza-cod2/zpam3/issues/22&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/eyza-cod2/zpam3/pull/22/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/pull/22&quot;&gt;#22&lt;/a&gt;) (&lt;a class=&quot;commit-link&quot; data-hovercard-type=&quot;commit&quot; data-hovercard-url=&quot;https://github.com/eyza-cod2/zpam3/commit/1a36b48e63c60896489f7e27f07194f856024448/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/commit/1a36b48e63c60896489f7e27f07194f856024448&quot;&gt;&lt;tt&gt;1a36b48&lt;/tt&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>eyza-cod2</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/16004085?s=60&amp;v=4"/>
+  </entry><entry>
+    <id>tag:github.com,2008:Repository/252138837/4.10</id>
+    <updated>2026-10-31T07:38:04Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/eyza-cod2/zpam3/releases/tag/4.10"/>
+    <title>zPAM4.10</title>
+    <content type="html">&lt;h1&gt;zPAM4.10&lt;/h1&gt;
+&lt;h2&gt;Commits since 4.09&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;zPAM4.10 (&lt;a class=&quot;commit-link&quot; data-hovercard-type=&quot;commit&quot; data-hovercard-url=&quot;https://github.com/eyza-cod2/zpam3/commit/b56668d7452e1269f001002b97e48a2b0e013fdc/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/commit/b56668d7452e1269f001002b97e48a2b0e013fdc&quot;&gt;&lt;tt&gt;b56668d&lt;/tt&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Flag leavers in CoD2x match (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;5994872589&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/eyza-cod2/zpam3/issues/24&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/eyza-cod2/zpam3/pull/24/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/pull/24&quot;&gt;#24&lt;/a&gt;) (&lt;a class=&quot;commit-link&quot; data-hovercard-type=&quot;commit&quot; data-hovercard-url=&quot;https://github.com/eyza-cod2/zpam3/commit/1772c397fdc7d87e7d0896282c0d62b2b40e205c/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/commit/1772c397fdc7d87e7d0896282c0d62b2b40e205c&quot;&gt;&lt;tt&gt;1772c39&lt;/tt&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Match stats: multi-kills, trades and kills by weapon class (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;5995200687&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/eyza-cod2/zpam3/issues/25&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/eyza-cod2/zpam3/pull/25/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/pull/25&quot;&gt;#25&lt;/a&gt;) (&lt;a class=&quot;commit-link&quot; data-hovercard-type=&quot;commit&quot; data-hovercard-url=&quot;https://github.com/eyza-cod2/zpam3/commit/72ee49c8458b0bd37857e1b65a5b1b8a5888bb11/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/commit/72ee49c8458b0bd37857e1b65a5b1b8a5888bb11&quot;&gt;&lt;tt&gt;72ee49c&lt;/tt&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Fix new weapons stats counting + right name in round report (&lt;a class=&quot;commit-link&quot; data-hovercard-type=&quot;commit&quot; data-hovercard-url=&quot;https://github.com/eyza-cod2/zpam3/commit/ff485344a8b6221b2c59eaae12cf8c3fac49b905/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/commit/ff485344a8b6221b2c59eaae12cf8c3fac49b905&quot;&gt;&lt;tt&gt;ff48534&lt;/tt&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Fix Kar98k Scope damage stats counting (&lt;a class=&quot;commit-link&quot; data-hovercard-type=&quot;commit&quot; data-hovercard-url=&quot;https://github.com/eyza-cod2/zpam3/commit/3ec0e3290515d9e274964cf9ab5082208b3a391b/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/commit/3ec0e3290515d9e274964cf9ab5082208b3a391b&quot;&gt;&lt;tt&gt;3ec0e32&lt;/tt&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Readme update (&lt;a class=&quot;commit-link&quot; data-hovercard-type=&quot;commit&quot; data-hovercard-url=&quot;https://github.com/eyza-cod2/zpam3/commit/1eb0a6d0e88444208391e361dbc6d53a1cb8fb2e/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/commit/1eb0a6d0e88444208391e361dbc6d53a1cb8fb2e&quot;&gt;&lt;tt&gt;1eb0a6d&lt;/tt&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;CI: Tag release commit (&lt;a class=&quot;commit-link&quot; data-hovercard-type=&quot;commit&quot; data-hovercard-url=&quot;https://github.com/eyza-cod2/zpam3/commit/c5f93da75e4585582c4a4e0bd151c0cfbdfe3d75/hovercard&quot; href=&quot;https://github.com/eyza-cod2/zpam3/commit/c5f93da75e4585582c4a4e0bd151c0cfbdfe3d75&quot;&gt;&lt;tt&gt;c5f93da&lt;/tt&gt;&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>eyza-cod2</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/16004085?s=60&amp;v=4"/>
+  </entry></feed>

@@ -1,0 +1,98 @@
+#!/usr/bin/env bash
+# COD2BOT control script.
+#   ./cod2botctl start|stop|restart|status|logs [module]|check|backup|restore <file>|update|test|say "<!command>"
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+PY="${PYTHON:-python3}"
+UNIT="cod2bot-backend"
+PIDFILE="$ROOT/data/backend.pid"
+export COD2BOT_ROOT="$ROOT"
+
+have_unit() {
+    command -v systemctl >/dev/null 2>&1 && systemctl --user cat "$UNIT" >/dev/null 2>&1
+}
+
+# PIDs of backends started from THIS installation (their working dir is $ROOT/backend)
+own_pids() {
+    local p
+    for p in $(pgrep -f -- "-m app" 2>/dev/null || true); do
+        [ "$(readlink "/proc/$p/cwd" 2>/dev/null)" = "$ROOT/backend" ] && echo "$p"
+    done
+}
+
+start() {
+    if have_unit; then systemctl --user start "$UNIT"; echo "started ($UNIT)"; return; fi
+    if [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE")" 2>/dev/null; then echo "already running (pid $(cat "$PIDFILE"))"; return; fi
+    [ -n "$(own_pids)" ] && { echo "already running (pid $(own_pids | tr '\n' ' '))"; return; }
+    mkdir -p "$ROOT/logs"
+    rm -f "$PIDFILE"
+    # the backend writes data/backend.pid itself once it is listening
+    (cd "$ROOT/backend" && nohup "$PY" -m app </dev/null >>"$ROOT/logs/stdout.log" 2>&1 &)
+    for _ in 1 2 3 4 5 6 7 8 9 10; do
+        [ -f "$PIDFILE" ] && break
+        sleep 0.5
+    done
+    if [ -f "$PIDFILE" ]; then
+        echo "started (pid $(cat "$PIDFILE"))"
+    else
+        echo "the backend did not start - last lines of logs/stdout.log:"
+        tail -n 5 "$ROOT/logs/stdout.log"
+        return 1
+    fi
+}
+
+stop() {
+    if have_unit; then systemctl --user stop "$UNIT"; echo "stopped"; return; fi
+    local pids
+    pids="$( { [ -f "$PIDFILE" ] && cat "$PIDFILE"; own_pids; } | sort -u)"
+    if [ -n "$pids" ]; then
+        kill $pids 2>/dev/null || true
+        sleep 1
+        rm -f "$PIDFILE"
+        echo "stopped (pid $(echo $pids))"
+    else
+        echo "not running"
+    fi
+}
+
+status() {
+    if have_unit; then systemctl --user --no-pager status "$UNIT" | head -12; fi
+    TOKEN="$(cat "$ROOT/data/api.token" 2>/dev/null || true)"
+    PORT="$(sed -n 's/^port *= *\([0-9]*\).*/\1/p' "$ROOT/config/cod2bot.ini" | head -1)"
+    if command -v curl >/dev/null 2>&1; then
+        echo -n "API health: "
+        curl -s -m 5 -H "X-COD2BOT-Token: $TOKEN" "http://127.0.0.1:${PORT:-8765}/health" || echo "DOWN"
+        echo
+    fi
+}
+
+case "${1:-}" in
+    start) start ;;
+    stop) stop ;;
+    restart) stop || true; sleep 1; start ;;
+    status) status ;;
+    logs) tail -n 60 -f "$ROOT/logs/${2:-backend}.log" ;;
+    check) cd "$ROOT/backend" && "$PY" -m app --check ;;
+    backup) cd "$ROOT/backend" && "$PY" -m app --backup ;;
+    restore)
+        [ -f "${2:-}" ] || { echo "usage: $0 restore backups/cod2bot-YYYYMMDD-HHMMSS.db"; exit 1; }
+        stop || true
+        cp "$ROOT/data/cod2bot.db" "$ROOT/data/cod2bot.db.before-restore" 2>/dev/null || true
+        rm -f "$ROOT/data/cod2bot.db-wal" "$ROOT/data/cod2bot.db-shm"
+        cp "$2" "$ROOT/data/cod2bot.db"
+        echo "restored $2"; start ;;
+    test) cd "$ROOT/backend" && "$PY" -m unittest discover -s tests ;;
+    say) cd "$ROOT/backend" && "$PY" -m app --say "${2:-!help}" --plain ;;
+    update)
+        # 1. backup  2. pull new code (git) or copy  3. tests  4. restart
+        cd "$ROOT/backend" && "$PY" -m app --backup
+        if [ -d "$ROOT/.git" ]; then git -C "$ROOT" pull --ff-only; else echo "no git checkout: copy the new files over $ROOT, then run: $0 restart"; fi
+        "$PY" -m unittest discover -s tests >/dev/null 2>&1 && echo "tests ok" || { echo "TESTS FAILED - not restarting"; exit 1; }
+        if [ -n "${EGGDROP_DIR:-}" ] && [ -d "$EGGDROP_DIR/scripts" ]; then
+            cp "$ROOT/eggdrop/scripts/cod2bot/cod2bot.tcl" "$EGGDROP_DIR/scripts/cod2bot/cod2bot.tcl"
+            echo "cod2bot.tcl updated in $EGGDROP_DIR - type .rehash on the partyline"
+        fi
+        "$0" restart ;;
+    *) echo "usage: $0 start|stop|restart|status|logs [module]|check|backup|restore <file>|update|test|say \"!command\""; exit 1 ;;
+esac

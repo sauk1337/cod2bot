@@ -1,0 +1,214 @@
+[
+ {
+  "id": 1832,
+  "name": "CITRONS TEAM",
+  "slug": "citrons-team",
+  "flag": "https://fpschallenge.eu/images/flags/cz.png",
+  "image": "https://fpschallenge.b-cdn.net/public/team/xfoxJBV1SDjVtvC47XZrDKmjnX9iLdT0jDtGcY6E.png",
+  "accepted": true,
+  "checkedIn": true,
+  "inProgress": true,
+  "frs": 19.16,
+  "registeredAt": "2026-08-30T20:58:03+02:00",
+  "members": [
+   {
+    "id": 1,
+    "username": "player1",
+    "formattedUsername": "player1",
+    "flag": "https://fpschallenge.eu/images/flags/cz.png"
+   },
+   {
+    "id": 2,
+    "username": "player2",
+    "formattedUsername": "player2",
+    "flag": "https://fpschallenge.eu/images/flags/cz.png"
+   },
+   {
+    "id": 3,
+    "username": "player3",
+    "formattedUsername": "player3",
+    "flag": "https://fpschallenge.eu/images/flags/cz.png"
+   },
+   {
+    "id": 4,
+    "username": "player4",
+    "formattedUsername": "player4",
+    "flag": "https://fpschallenge.eu/images/flags/cz.png"
+   },
+   {
+    "id": 5,
+    "username": "player5",
+    "formattedUsername": "player5",
+    "flag": "https://fpschallenge.eu/images/flags/cz.png"
+   },
+   {
+    "id": 6,
+    "username": "player6",
+    "formattedUsername": "player6",
+    "flag": "https://fpschallenge.eu/images/flags/cz.png"
+   }
+  ]
+ },
+ {
+  "id": 360191,
+  "name": "POCUFEK",
+  "slug": "pocufek",
+  "flag": "https://fpschallenge.eu/images/flags/eu.png",
+  "image": "https://fpschallenge.b-cdn.net/images/team/_stock.png",
+  "accepted": true,
+  "checkedIn": true,
+  "inProgress": true,
+  "frs": 5.93,
+  "registeredAt": "2026-08-30T20:44:34+02:00",
+  "members": [
+   {
+    "id": 7,
+    "username": "player7",
+    "formattedUsername": "player7",
+    "flag": "https://fpschallenge.eu/images/flags/si.png"
+   },
+   {
+    "id": 8,
+    "username": "player8",
+    "formattedUsername": "player8",
+    "flag": "https://fpschallenge.eu/images/flags/gq.png"
+   },
+   {
+    "id": 9,
+    "username": "player9",
+    "formattedUsername": "player9",
+    "flag": "https://fpschallenge.eu/images/flags/hr.png"
+   },
+   {
+    "id": 10,
+    "username": "player10",
+    "formattedUsername": "player10",
+    "flag": "https://fpschallenge.eu/images/flags/cn.png"
+   },
+   {
+    "id": 11,
+    "username": "player11",
+    "formattedUsername": "player11",
+    "flag": "https://fpschallenge.eu/images/flags/hr.png"
+   }
+  ]
+ },
+ {
+  "id": 117784,
+  "name": "unprecedented",
+  "slug": "unprecedented-9",
+  "flag": "https://fpschallenge.eu/images/flags/hr.png",
+  "image": "https://fpschallenge.b-cdn.net/public/team/DgaBURFXxwe1g8jlllZfZ7TRqRCbhJouSAkFOxdw.png",
+  "accepted": true,
+  "checkedIn": true,
+  "inProgress": true,
+  "frs": 1.75,
+  "registeredAt": "2026-08-30T16:24:15+02:00",
+  "members": [
+   {
+    "id": 12,
+    "username": "player12",
+    "formattedUsername": "player12",
+    "flag": "https://fpschallenge.eu/images/flags/hr.png"
+   },
+   {
+    "id": 13,
+    "username": "player13",
+    "formattedUsername": "player13",
+    "flag": "https://fpschallenge.eu/images/flags/si.png"
+   },
+   {
+    "id": 14,
+    "username": "player14",
+    "formattedUsername": "player14",
+    "flag": "https://fpschallenge.eu/images/flags/hr.png"
+   },
+   {
+    "id": 15,
+    "username": "player15",
+    "formattedUsername": "player15",
+    "flag": "https://fpschallenge.eu/images/flags/hr.png"
+   },
+   {
+    "id": 16,
+    "username": "player16",
+    "formattedUsername": "player16",
+    "flag": "https://fpschallenge.eu/images/flags/ch.png"
+   },
+   {
+    "id": 17,
+    "username": "player17",
+    "formattedUsername": "player17",
+    "flag": "https://fpschallenge.eu/images/flags/sc.png"
+   },
+   {
+    "id": 18,
+    "username": "player18",
+    "formattedUsername": "player18",
+    "flag": "https://fpschallenge.eu/images/flags/hr.png"
+   },
+   {
+    "id": 19,
+    "username": "player19",
+    "formattedUsername": "player19",
+    "flag": "https://fpschallenge.eu/images/flags/hr.png"
+   }
+  ]
+ },
+ {
+  "id": 1195,
+  "name": "SUPERKIDS",
+  "slug": "superkids",
+  "flag": "https://fpschallenge.eu/images/flags/hu.png",
+  "image": "https://fpschallenge.b-cdn.net/public/team/WKySaE6NlifpquWASwF8yO1hicBQXnzQO0kb2CR7.png",
+  "accepted": true,
+  "checkedIn": true,
+  "inProgress": true,
+  "frs": 27.59,
+  "registeredAt": "2026-08-28T13:32:58+02:00",
+  "members": [
+   {
+    "id": 20,
+    "username": "player20",
+    "formattedUsername": "player20",
+    "flag": "https://fpschallenge.eu/images/flags/hu.png"
+   },
+   {
+    "id": 21,
+    "username": "player21",
+    "formattedUsername": "player21",
+    "flag": "https://fpschallenge.eu/images/flags/hu.png"
+   },
+   {
+    "id": 22,
+    "username": "player22",
+    "formattedUsername": "player22",
+    "flag": "https://fpschallenge.eu/images/flags/hu.png"
+   },
+   {
+    "id": 23,
+    "username": "player23",
+    "formattedUsername": "player23",
+    "flag": "https://fpschallenge.eu/images/flags/cn.png"
+   },
+   {
+    "id": 24,
+    "username": "player24",
+    "formattedUsername": "player24",
+    "flag": "https://fpschallenge.eu/images/flags/hu.png"
+   },
+   {
+    "id": 25,
+    "username": "player25",
+    "formattedUsername": "player25",
+    "flag": "https://fpschallenge.eu/images/flags/hu.png"
+   },
+   {
+    "id": 26,
+    "username": "player26",
+    "formattedUsername": "player26",
+    "flag": "https://fpschallenge.eu/images/flags/hu.png"
+   }
+  ]
+ }
+]
