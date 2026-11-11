@@ -35,6 +35,7 @@ def build(cfg: Config, start_jobs: bool = True, console: bool = False):
     community.setup(app, scheduler)
 
     maint = Maintenance(app)
+    app.services["maintenance"] = maint
     scheduler.add("maintenance.daily", maint.daily, 60, delay=60)
     scheduler.add("announcer.digest", maint.digest, 60, delay=90,
                   enabled=lambda: app.module_enabled("announcer"))
@@ -74,24 +75,31 @@ class Maintenance:
         if now.hour != app.cfg.getint("announcer", "digest_hour", 20) or app.db.cfg_get("digest.last") == today:
             return
         app.db.cfg_set("digest.last", today)
+        text = self.build_digest()
+        if text:
+            app.services["announcer"].push("daily_digest", text, PRIO_LOW, f"digest:{today}")
+
+    def build_digest(self) -> str:
+        """Summary line + one line (with its link) per live/open tournament and the next war.
+        Lines are separated by "\\n"; the announcer sends them together (max. 5)."""
+        app = self.app
         lang = app.lang
         news = app.db.scalar("SELECT COUNT(*) FROM news WHERE fetched_at > datetime('now','-1 day')", (), 0)
+        tours = app.db.q("SELECT * FROM tournaments WHERE state IN ('ONGOING','WAITING_FOR_START','REGISTRATION',"
+                         "'ANNOUNCE','MANUAL') ORDER BY state != 'ONGOING', start_at LIMIT 3")
+        wars = app.db.q("SELECT * FROM wars WHERE status='scheduled' AND scheduled_at "
+                        "BETWEEN datetime('now') AND datetime('now','+1 day') ORDER BY scheduled_at LIMIT 1")
+        if news == 0 and not tours and not wars:
+            return ""
+        live = sum(1 for t in tours if t["state"] == "ONGOING")
         parts = [irc.label(app.t("digest.news", lang), irc.bold(news))]
-        reg = app.db.q("SELECT name, reg_end, start_at FROM tournaments WHERE state IN ('REGISTRATION','ANNOUNCE') "
-                       "ORDER BY start_at LIMIT 2")
-        if reg:
-            parts.append(irc.label(app.t("digest.open", lang),
-                                   ", ".join(f"{irc.bold(t['name'])} {irc.muted(app.fmt_dt(t['start_at'], False))}"
-                                             for t in reg)))
-        live = app.db.scalar("SELECT COUNT(*) FROM tournaments WHERE state = 'ONGOING'", (), 0)
         if live:
             parts.append(irc.label(app.t("digest.live", lang), irc.bold(live)))
-        wars = app.db.q("SELECT clan1, clan2, scheduled_at FROM wars WHERE status='scheduled' AND scheduled_at "
-                        "BETWEEN datetime('now') AND datetime('now','+1 day') ORDER BY scheduled_at LIMIT 2")
+        if len(tours) - live:
+            parts.append(irc.label(app.t("digest.open", lang), irc.bold(len(tours) - live)))
         if wars:
-            parts.append(irc.label("Wars", ", ".join(
-                f"{w['clan1']} vs {w['clan2']} {irc.muted(app.local(w['scheduled_at']).strftime('%H:%M'))}"
-                for w in wars)))
-        if news == 0 and not reg and not live and not wars:
-            return
-        app.services["announcer"].push("daily_digest", irc.line("DIGEST", *parts), PRIO_LOW, f"digest:{today}")
+            parts.append(irc.label("Wars", irc.bold(len(wars))))
+        lines = [irc.line("DIGEST", *parts)]
+        lines += [app.services["tournaments"].format_line(t, lang) for t in tours]
+        lines += [app.services["wars"].format_war(w, lang) for w in wars]
+        return "\n".join(lines)

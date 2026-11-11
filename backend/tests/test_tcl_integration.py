@@ -27,8 +27,9 @@ class TclIntegrationTest(AppTestCase):
             conf = conf.replace('variable tokenfile "cod2bot/data/api.token"',
                                 f'variable tokenfile "{(self.tmp / "api.token").as_posix()}"')
             (egg / "cod2bot.conf").write_text(conf, encoding="utf-8")
-            self.app.services["announcer"].push("news", "\x0304TEST ANNOUNCEMENT\x03", dedupe_key="tcl",
-                                                channels=["#cod2bot", "#nocolour"])
+            self.app.services["announcer"].push(
+                "news", "\x0304TEST ANNOUNCEMENT\x03 · ñ » end\nSECOND LINE https://example.org/x",
+                dedupe_key="tcl", channels=["#cod2bot", "#nocolour"])
             test = ROOT / "backend" / "tests" / "tcl" / "test_cod2bot.tcl"
             proc = subprocess.run([TCLSH, str(test), egg.as_posix()], capture_output=True, text=True,
                                   timeout=120, encoding="utf-8", errors="replace")

@@ -34,6 +34,10 @@ check "backend online" {$::cod2bot::online == 1}
 check "announcement delivered to +cod2 channel" {[llength [lines_matching "PRIVMSG #cod2bot :*TEST ANNOUNCEMENT*"]] == 1}
 check "announcement stripped on +c channel" {[llength [lines_matching "PRIVMSG #nocolour :*TEST ANNOUNCEMENT*"]] == 1 && [string first \x03 [lindex [lines_matching "PRIVMSG #nocolour :*"] 0]] == -1}
 check "no announcement in channel without +cod2" {[llength [lines_matching "PRIVMSG #other*"]] == 0}
+set ann [lindex [lines_matching "PRIVMSG #cod2bot :*TEST ANNOUNCEMENT*"] 0]
+set want [format "%c %c %c end" 0xB7 0xF1 0xBB]
+check "UTF-8 decoded once (no mojibake)" {[string first $want $ann] >= 0 && [string first [format %c 0xC2] $ann] == -1 && [string first [format %c 0xC3] $ann] == -1}
+check "multi-line announcement delivered in order" {[lsearch -glob $::out "PRIVMSG #cod2bot :SECOND LINE*"] == [lsearch -glob $::out "PRIVMSG #cod2bot :*TEST ANNOUNCEMENT*"] + 1}
 
 set ::out {}
 say Bob bob@host1 * #cod2bot "!map toujane"

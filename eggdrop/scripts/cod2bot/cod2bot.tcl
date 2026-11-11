@@ -168,7 +168,10 @@ proc ::cod2bot::request {method path query callback} {
 		return
 	}
 	set url "$api$path"
-	set opts [list -timeout $timeout -headers [list X-COD2BOT-Token $token] \
+	# -binary 1: we decode the UTF-8 answer ourselves (see response), because the
+	# charset handling of Tcl's http package differs between versions and could
+	# leave raw bytes in the string (shown on IRC as "Â·" instead of "·").
+	set opts [list -timeout $timeout -binary 1 -headers [list X-COD2BOT-Token $token] \
 		-command [list ::cod2bot::response $callback]]
 	if {$method eq "POST"} {
 		lappend opts -query $query -type "application/x-www-form-urlencoded; charset=utf-8"
@@ -185,7 +188,7 @@ proc ::cod2bot::request {method path query callback} {
 proc ::cod2bot::response {callback tok} {
 	set status [::http::status $tok]
 	set code [::http::ncode $tok]
-	set data [::http::data $tok]
+	set data [encoding convertfrom utf-8 [::http::data $tok]]
 	::http::cleanup $tok
 	if {$status ne "ok" || $code != 200} {
 		if {$code == 401} {
@@ -406,6 +409,8 @@ proc ::cod2bot::dcc {hand idx text} {
 		}
 		default {
 			putdcc $idx "cod2bot $version | backend: [expr {$online ? "online v$backend_version" : "OFFLINE"}] | commands: [llength $commands] | channels: [join [announce_channels] {, }]"
+			# encoding diagnostics: the middle dot must show as one character, not as "A-circumflex + dot"
+			putdcc $idx "Tcl [info patchlevel] | http [package present http] | system encoding [encoding system] | utf8_fix $::cod2bot::utf8_fix | test: [format %c 0xB7]"
 			putdcc $idx "Enable a channel with: .chanset #channel +cod2   |   .cod2 reload"
 		}
 	}

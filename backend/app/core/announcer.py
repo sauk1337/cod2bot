@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import time
 
-from . import log
+from . import irc, log
 from .db import utcnow
 
 L = log.get("core")
@@ -51,11 +51,14 @@ class Announcer:
         return queued
 
     def pull(self, channels: list[str]) -> list[tuple[str, str]]:
-        """Return at most one due message per channel and mark it as sent."""
+        """Return at most one due message per channel and mark it as sent.
+        A message may hold several IRC lines separated by "\\n" (max. 5); each line is
+        returned as its own (channel, line) pair, in order."""
         if self.app.maintenance:
             return []
         min_interval = self.app.cfg.getint("announcer", "min_interval", 90)
         max_hour = self.app.cfg.getint("announcer", "max_per_hour", 12)
+        max_bytes = self.app.cfg.getint("irc", "max_line_bytes", 400)
         now = time.time()
         out = []
         db = self.app.db
@@ -74,7 +77,8 @@ class Announcer:
                 continue
             db.x("UPDATE announcements SET sent_at = ? WHERE id = ?", (utcnow(), row["id"]))
             self.last_sent[chan] = now
-            out.append((chan, row["text"]))
+            for line in [l for l in row["text"].replace("\r", "").split("\n") if l.strip()][:5]:
+                out.append((chan, irc.truncate(line, max_bytes)))
         return out
 
     def pending(self) -> int:

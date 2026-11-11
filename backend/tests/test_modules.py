@@ -163,6 +163,20 @@ class TournamentTests(AppTestCase):
         self.assertEqual(len(pulled), 1)
         self.assertIn("CoD2 SA - Nightcup #13 · live", irc.strip(pulled[0][1]))
 
+    def test_digest_multiline_with_links(self):
+        from app.core import irc
+        self.t.refresh()
+        text = self.app.services["maintenance"].build_digest()
+        lines = text.splitlines()
+        self.assertTrue(irc.strip(lines[0]).startswith(" COD2  DIGEST "))
+        self.assertGreaterEqual(len(lines), 2)
+        self.assertTrue(all("https://fpschallenge.eu/tournament/" in l for l in lines[1:]))
+        self.app.services["announcer"].push("daily_digest", text, dedupe_key="digest-test")
+        pulled = self.app.services["announcer"].pull(["#cod2bot"])
+        self.assertEqual(len(pulled), len(lines))          # all lines of the digest together, in order
+        self.assertEqual([c for c, _ in pulled], ["#cod2bot"] * len(lines))
+        self.assertTrue(all(len(l.encode("utf-8")) <= 400 for _, l in pulled))
+
     def test_winners_from_results_news(self):
         news = self.app.services["news"]
         self.app.http.routes["/api/v1/news"] = "fps_news.json"
